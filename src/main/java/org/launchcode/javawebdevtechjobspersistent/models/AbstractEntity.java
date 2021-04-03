@@ -5,6 +5,7 @@ import com.sun.istack.NotNull;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ public abstract class AbstractEntity {
     @GeneratedValue
     private int id;
 
-    @NotNull
+    @NotBlank
     @Size(min = 1, max = 200)
     private String name;
 
